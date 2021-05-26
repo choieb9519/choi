@@ -1,28 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%@ page import="java.util.*" %>
-<%@ page import="util.*" %>
 
 <% request.setCharacterEncoding("utf-8"); %>
 
-<%
-	String id = request.getParameter("id");
-	String password = request.getParameter("password");
-	
-	if (id.equals(password)) {
-		response.addCookie(Cookies.createCookie("AUTH", id, "/", -1));
-%>
-
-<%
-Cookie[] cookies = request.getCookies();
-if (cookies != null && cookies.length > 0) {
-	for (int i = 0; i < cookies.length; i++) {
-		if (cookies[i].getName().equals("name")) {
-			Cookie cookie = new Cookie("name", "");
-			cookie.setMaxAge(0);
-			response.addCookie(cookie);
-		}
-	}
-}
+<%  // 30분 후 쿠키 삭제
+Cookie cookie = new Cookie("long-cookie", "long-value");
+cookie.setMaxAge(30 * 60); 
+response.addCookie(cookie);
 %>
 
 <!DOCTYPE html>
@@ -31,22 +15,32 @@ if (cookies != null && cookies.length > 0) {
 
 <%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp" %>
 
-<title>로그인 페이지</title>
+<title>login-form</title>
 </head>
+
 <body>
-<div class="container">
-	로그인에 성공했습니다.
+<div class="container mt-5">
+
+	<div class="row justify-content-center">
+		<div class="col-4">
+			<form action="<%=request.getContextPath() %>/ch10/textbook/sessionLogin.jsp" method="post">
+				<div class="form-group">
+					<label for="input1">
+						아이디 
+					</label>
+					<input type="text" name="id" id="input1" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="input2">
+						비밀번호
+					</label>
+					<input type="password" name="password" class="form-control" id="input2">
+				</div>
+				<input type="submit" value="로그인" class="btn btn-primary">
+			</form>
+		</div>
+	</div>
+	
 </div>
 </body>
 </html>
-
-<%
-	} else {
-%>
-		<script>
-			alert("로그인에 실패하였습니다");
-			history.go(-1);
-		</script>
-<%	
-	}
-%>
