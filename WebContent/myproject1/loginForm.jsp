@@ -3,7 +3,7 @@
 
 <% request.setCharacterEncoding("utf-8"); %>
 
-<%  // 30분 후 쿠키 삭제
+<%	// 30분 후 쿠키 삭제
 Cookie cookie = new Cookie("long-cookie", "long-value");
 cookie.setMaxAge(30 * 60); 
 response.addCookie(cookie);
@@ -19,8 +19,9 @@ response.addCookie(cookie);
 </head>
 
 <body>
-<div class="container mt-5">
 
+<!-- 로그인 폼 만들기 -->
+<div class="container mt-5">
 	<div class="row justify-content-center">
 		<div class="col-4">
 			<form action="<%=request.getContextPath() %>/ch10/textbook/sessionLogin.jsp" method="post">
@@ -40,6 +41,9 @@ response.addCookie(cookie);
 			</form>
 		</div>
 	</div>
+	
+	<!-- 로그인 후 넘어가는 페이지 -->
+	<form action="newForm".jsp">
 	
 </div>
 </body>
