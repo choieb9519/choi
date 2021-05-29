@@ -13,7 +13,7 @@
 <title>login-success</title>
 </head>
 <body>
-<div class="container">
+<div class="container"> 
 	<h1>환영합니다.</h1>
 	
 	<!-- 화원목록 버튼 누르면 화원목록 페이지로 넘어감 -->

@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-	<h1>회원 목록</h1>
+	<h1>회원 목록</h1> 
 	
 	<!-- 로그아웃 버튼 누르면 로그인 페이지로 넘어감 -->
    <input type="submit" value="로그아웃" class="btn btn-primary">

@@ -7,7 +7,7 @@
 <%	
 Cookie cookie = new Cookie("long-cookie", "long-value");
 cookie.setMaxAge(30 * 60); 
-response.addCookie(cookie);
+response.addCookie(cookie); 
 %>
 
 <!DOCTYPE html>
