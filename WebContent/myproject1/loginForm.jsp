@@ -36,7 +36,7 @@
 	</div>
 	
 	<!-- 로그인 후 넘어가는 페이지 -->
-	<form action="newForm".jsp">
+	<form action="newForm".jsp" method="post">
 	
 </div>
 </body>
