@@ -15,6 +15,8 @@
 <body>
 <div class="container"> 
 	<h1>환영합니다.</h1>
+	아이디 : <%= request.getParameter("id") %> <br>
+	비밀번호 : <%= request.getParameter("password") %>
 	
 	<!-- 화원목록 버튼 누르면 화원목록 페이지로 넘어감 -->
 	<input type="submit" value="회원목록" class="btn btn-primary">
