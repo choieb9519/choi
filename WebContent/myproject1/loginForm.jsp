@@ -3,7 +3,7 @@
 
 <% request.setCharacterEncoding("utf-8"); %>
 
-// 30분 후 쿠키 삭제
+// 30분 후 쿠키 삭제 
 <%	
 Cookie cookie = new Cookie("long-cookie", "long-value");
 cookie.setMaxAge(30 * 60); 

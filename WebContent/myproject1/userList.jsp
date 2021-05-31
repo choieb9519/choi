@@ -11,7 +11,7 @@
 
 <meta charset="UTF-8">
 <title>user-list</title>
-</head>
+</head> 
 <body>
 <div class="container">
 	<h1>회원 목록</h1> 

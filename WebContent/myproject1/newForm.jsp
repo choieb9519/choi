@@ -10,7 +10,7 @@
 <%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp"%>
 
 <meta charset="UTF-8">
-<title>login-success</title>
+<title>login-success</title> 
 </head>
 <body>
 <div class="container"> 
